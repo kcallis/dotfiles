@@ -1,12 +1,12 @@
 # vim: filetype=neomuttrc
-# muttrc file for account g-personal
+# muttrc file for account kim.callis@gmail.com
 set realname = "K.C. Callis"
 set from = "kim.callis@gmail.com"
-set sendmail = "msmtp -a g-personal"
+set sendmail = "msmtp -a kim.callis@gmail.com"
 alias me K.C. Callis <kim.callis@gmail.com>
-set folder = "/home/kcc/.local/share/mail/g-personal"
-set header_cache = /home/kcc/.cache/mutt-wizard/g-personal/headers
-set message_cachedir = /home/kcc/.cache/mutt-wizard/g-personal/bodies
+set folder = "/home/kcc/.config/local/share/mail/kim.callis@gmail.com/"
+set header_cache = /home/kcc/.config/cache/mutt-wizard/kim.callis@gmail.com/headers
+set message_cachedir = /home/kcc/.config/cache/mutt-wizard/kim.callis@gmail.com/bodies
 set mbox_type = Maildir
 
 set crypt_autosign = yes
@@ -19,7 +19,7 @@ bind index,pager g noop
 bind index,pager M noop
 bind index,pager C noop
 bind index gg first-entry
-macro index o "<shell-escape>mbsync -V g-personal<enter>" "run mbsync to sync g-personal"
+macro index o "<shell-escape>mbsync -V kim.callis@gmail.com<enter>" "run mbsync to sync kim.callis@gmail.com"
 unmailboxes *
 
 set spoolfile = "+INBOX"
