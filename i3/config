@@ -124,7 +124,7 @@ set $web "2: web"
 # Start brave at boot
 exec --no-startup-id brave
 set $mail "3: mail"
-exec --no-startup-id i3-msg workspace "$mail"; exec /usr/bin/urxvtc -e neomail
+exec --no-startup-id i3-msg workspace "$mail"; exec /usr/bin/urxvtc -e neomutt
 set $file_manager "4: files"
 set $tasks "5: tasks"
 set $documents "6: documents"
