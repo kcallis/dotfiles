@@ -10,6 +10,8 @@ export VISUAL="nvim"
 
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
+export GNUPGHOME="$XDG_CONFIG_HOME/gnupg"
+
 # History filepath
 export HISTFILE="$ZDOTDIR/.zhistory"
 # Maximum events for internal history
