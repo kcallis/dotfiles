@@ -1,5 +1,6 @@
 alias vim="nvim"
 alias e="nvim"
+alias vimrc="nvim $DOTFILES/nvim/init.vim"
 alias ll="ls -lah"
 alias ga="git add"
 alias gc="git commit"
@@ -39,6 +40,7 @@ alias cless=colorize_less
 alias clr="clear; echo Currently logged in on $TTY, as $USERNAME in directory $PWD."
 alias cp="cp -iv"
 alias diff="diff --color=auto"
+alias dothome="cd $DOTFILES"
 alias dud="du -d 1 -h"
 alias duf="du -sh *"
 alias e=vim
