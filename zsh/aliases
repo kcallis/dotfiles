@@ -56,6 +56,7 @@ alias fwr="sudo firewall-cmd --reload"
 alias fwrp="sudo firewall-cmd --runtime-to-permanent"
 alias g=git
 alias ga="git add"
+alias gstat="git status"
 alias h=history
 alias help=man
 alias hgrep="fc -El 0 | grep"
