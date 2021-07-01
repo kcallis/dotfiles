@@ -33,7 +33,7 @@ exec --no-startup-id dunst
 
 # Remap Cap Lock to CTRL
 #exec --no-startup-id /usr/bin/setxkbmap -option "ctrl:swapcaps"
-exec --no-startup-id /usr/bin/setxkbmap -option "caps:ctrl_swapcaps"
+#exec --no-startup-id /usr/bin/setxkbmap -option "caps:ctrl_swapcaps"
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
