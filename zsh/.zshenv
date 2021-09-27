@@ -1,4 +1,12 @@
 # For .dotfiles
+#
+
+path=('~/.local/bin' '~/.local/sbin' $path)
+export PATH
+
+# Add +in task on prompt
+export PS1='$(task +in +PENDING count) '$PS1
+
 export XDG_CONFIG_HOME="$HOME/.config"
 # For user specific data
 export XDG_DATA_HOME="$XDG_CONFIG_HOME/local/share"
@@ -26,4 +34,10 @@ export FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!.git'"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # Access Field Nation Worklogs
-export FN_WORKLOGS="$HOME/Documents/Markdown/Worklogs/Field_Nation/$(date +"%Y/%b/%d")"
+export FN_WORKLOGS="$HOME/Documents/Markdown/Worklogs/Field_Nation/"
+
+export TODAY=$(date +"%Y/%b/%d")
+
+export TASKRC=~/.config/task/taskrc
+export TASKDATA=~/.config/task
+
