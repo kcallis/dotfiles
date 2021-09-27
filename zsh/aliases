@@ -50,6 +50,7 @@ alias fd="find . -type d -name"
 alias ff="find . -type f -name"
 alias ffmpeg="ffmpeg -hide_banner"
 alias fgrep="fgrep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}"
+alias fnew="cp ~/Documents/Markdown/Worklogs/Field_Nation/.skel/worklog_template.md ."
 alias fw="sudo firewall-cmd"
 alias fwp="sudo firewall-cmd --permanent"
 alias fwr="sudo firewall-cmd --reload"
@@ -61,7 +62,7 @@ alias h=history
 alias help=man
 alias hgrep="fc -El 0 | grep"
 alias hist10="print -l ${(o)history%% *} | uniq -c | sort -nr | head -n 10"
-alias history="omz_history -f"
+#alias history="omz_history -f"
 alias in="task add +in"
 alias ka=killall
 alias l="ls -lFh"
@@ -98,6 +99,14 @@ alias pscpu10="ps -e -o pcpu,cpu,nice,state,cputime,args|sort -k1,1n -nr | head 
 alias psmem="ps -e -orss=,args= | sort -b -k1 -nr"
 alias psmem10="ps -e -orss=,args= | sort -b -k1 -nr | head -10"
 alias rd=rmdir
+read_and_review (){
+    link="$1"
+    title=$(webpage_title $link)
+    echo $title
+    descr="\"Read and review: $title\""
+    id=$(task add +next +rnr "$descr" | sed -n 's/Created task \(.*\)./\1/p')
+    task "$id" annotate "$link"
+}
 alias rm="rm -vI"
 alias rnd="task add +rnd +next +@computer +@online"
 alias rnr=read_and_review
@@ -237,11 +246,17 @@ alias t=task
 alias ta="tmux attach -t"
 alias tad="tmux attach -d -t"
 alias think="tickle +1d"
+tickle () {
+    deadline=$1
+    shift
+    in +tickle wait:$deadline $@
+}
 alias tick=tickle
 alias tin="task in"
 alias tkss="tmux kill-session -t"
 alias tksv="tmux kill-server"
 alias tl="tmux list-sessions"
+alias tlog="task log +taskwarrior"
 alias #tmux=_zsh_tmux_plugin_run
 alias trem=transmission-remote
 alias ts="tmux new-session -s"
@@ -255,6 +270,9 @@ alias vj="callvim -b"\"":wincmd j"\"
 alias vk="callvim -b"\"":wincmd k"\"
 alias vl="callvim -b"\"":wincmd l"\"
 alias vvsp="callvim -b"\"":vsp"\"
+webpage_title (){
+    wget -qO- "$*" | hxselect -s '\n' -c  'title' 2>/dev/null
+}
 alias which="(alias; declare -f) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot"
 alias which-command=whence
 alias xzegrep="xzegrep --color=auto"
@@ -306,4 +324,4 @@ alias yainsd="yay -S --asdeps"
 alias yamir="yay -Syy"
 alias yaupd="yay -Sy"
 alias upgrade="yay -Syu"
-alias nocap="sudo dumpkeys | sed "s/\s*58\s*=\s*Caps_Lock/ 58 = Control" | sudo loadkeys"
+alias nocap='sudo dumpkeys | sed "s/\s*58\s*=\s*Caps_Lock/ 58 = Control" | sudo loadkeys'
