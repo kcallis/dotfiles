@@ -69,6 +69,37 @@ cursor_mode() {
 
 cursor_mode
 
+# add Taskwarrior
+# TASK WARRIOR INTO MY PROMPT
+# this part is just fun-with-utf8
+# https://twitter.com/pjf/status/852466839145795584
+URGENT="2757"
+DUETOMORROW="2690"
+DUETODAY="2691"
+OVERDUE="2639"
+OK="2714"
+
+# shows if any TaskWarrior tasks are in need of attention
+function task_indicator {
+    if [ `task +READY +OVERDUE count` -gt "0" ]  ; then
+        printf "%b" "\u$OVERDUE"
+    elif [ `task +READY +DUETODAY count` -gt "0" ]  ; then
+        printf "%b" "\u$DUETODAY"
+    elif [ `task +READY +DUETomorrow count` -gt "0" ]  ; then
+        printf "%b" "\u$DUETOMORROW"
+    elif [ `task +READY urgency \> 10 count` -gt "0" ]  ; then
+        printf "%b" "\u$URGENT"
+    else
+        printf "%b" "\u$OK"
+    fi
+}
+task="\$(task_indicator)"
+addprompt=$task
+PROMPT="$addprompt $PROMPT"
+
 source $DOTFILES/zsh/scripts.sh
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+source $DOTFILES/zsh/.zshenv
+
