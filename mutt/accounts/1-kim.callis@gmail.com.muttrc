@@ -61,15 +61,9 @@ my_hdr User-Agent:Mutt/1.6.2-neo (Arch Linux/X86_64)
 my_hdr X-Attribution: kcc
 my_hdr X-GPG-Key-FingerPrint: EA3E 9C81 DF9B 8826
 my_hdr X-GPG-Key-Server: http://pgp.mit.edu
-my_hdr X-Message-Flag: OUTLOOK WARNING!! Use Open Source
-my_hdr Reply-By: `date --date="-3 days"`
-my_hdr X-MSMail-Priority: High
-#my_hdr X-GPG-Key-FingerPrint: 88A0 971B 75EB 7148 52EE 42EA
-#my_hdr X-GPG-Key-FingerPrint: 52EE42EA
-#my_hdr X-GPG-Key-FingerPrint: 9EB4 24B6 3011 D9AB
-# D1D5AAC587197956F48C61EEEA3E9C81DF9B8826
-##my_hdr X-PGP-Key: fp="C928 A815 10AB 7AEA 88A0 971B 75EB 7148 52EE 42EA"; id="0x52EE42EA"; \
-# get=<https://keyserver.pgp.com/vkd/DownloadKey.event?keyid=0x75EB714852EE42EA>;
 # When OutLook receives email it will put it at the
 # top of their mailbox list and flag it with an "urgent"
 # red box. Just another way to play with Outlook/LookOut users.
+my_hdr X-Message-Flag: OUTLOOK WARNING!! Use Open Source
+my_hdr Reply-By: `date --date="-3 days"`
+my_hdr X-MSMail-Priority: High
