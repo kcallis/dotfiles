@@ -7,10 +7,15 @@
 mkdir -p "$XDG_CONFIG_HOME/nvim"
 mkdir -p "$XDG_CONFIG_HOME/nvim/undo"
 
-ln -sf "$DOTFILES/nvim/init.vim" "$XDG_CONFIG_HOME/nvim"
+ln -sf "$DOTFILES/nvim/spell" "$XDG_CONFIG_HOME/nvim/colors"
+ln -sf "$DOTFILES/nvim/ftdetect" "$XDG_CONFIG_HOME/nvim/ftdetect"
+ln -sf "$DOTFILES/nvim/ftplugin" "$XDG_CONFIG_HOME/nvim/ftplugin"
+ln -sf "$DOTFILES/nvim/plugged" "$XDG_CONFIG_HOME/nvim/plugged"
+ln -sf "$DOTFILES/nvim/spell" "$XDG_CONFIG_HOME/nvim/spell"
+ln -sf "$DOTFILES/nvim/syntax" "$XDG_CONFIG_HOME/nvim/thesaurus"
+ln -sf "$DOTFILES/nvim/ultsnips" "$XDG_CONFIG_HOME/nvim/ultsnips"
 
-rm -rf "$XDG_CONFIG_HOME/X11"
-ln -s "$DOTFILES/X11" "$XDG_CONFIG_HOME"
+ln -sf "$DOTFILES/nvim/init.vim" "$XDG_CONFIG_HOME/nvim"
 
 # install neovim plugin manager
 [ ! -f "$DOTFILES/nvim/autoload/plug.vim" ] \
@@ -19,6 +24,7 @@ ln -s "$DOTFILES/X11" "$XDG_CONFIG_HOME"
 
 mkdir -p "$XDG_CONFIG_HOME/nvim/autoload"
 ln -sf "$DOTFILES/nvim/autoload/plug.vim" "$XDG_CONFIG_HOME/nvim/autoload/plug.vim"
+
 
 # Install (or update) all the plugins
 nvim --noplugin +PlugUpdate +qa
@@ -81,3 +87,12 @@ mkdir -p "$XDG_CONFIG_HOME/mutt"
 #mkdir -p "$XDG_CONFIG_HOME/mutt/accounts"
 ln -sf "$DOTFILES/mutt/muttrc" "$XDG_CONFIG_HOME/mutt/muttrc"
 ln -sf "$DOTFILES/mutt/accounts" "$XDG_CONFIG_HOME/mutt"
+
+########
+# task #
+########
+
+mkdir -p "$XDG_CONFIG_HOME/task"
+ln -sf "$DOTFILES/task/taskrc" "$XDG_CONFIG_HOME/task/taskrc"
+
+
