@@ -123,13 +123,15 @@ bindsym $mod+a focus parent
 #set $ws10 "10"
 
 set $terms "1: terms"
+exec --no-startup-id i3-msg workspace "$terms"; exec /usr/bin/urxvtc
 set $web "2: web"
 # Start brave at boot
 exec --no-startup-id brave
 set $mail "3: mail"
 exec --no-startup-id i3-msg workspace "$mail"; exec /usr/bin/urxvtc -e neomutt
-set $file_manager "4: files"
-set $tasks "5: tasks"
+set $tasks "4: tasks"
+exec --no-startup-id i3-msg workspace "$tasks"; exec /usr/bin/urxvtc -e ~/.local/bin/task-dashboard &
+set $file_manager "5: files"
 set $documents "6: documents"
 set $mindmap "7: mindmap"
 
@@ -148,8 +150,8 @@ set $mindmap "7: mindmap"
 bindsym $mod+1 workspace $terms
 bindsym $mod+2 workspace $web
 bindsym $mod+3 workspace $mail
-bindsym $mod+4 workspace $file_manager
-bindsym $mod+5 workspace $tasks
+bindsym $mod+4 workspace $tasks
+bindsym $mod+5 workspace $file_manager
 bindsym $mod+6 workspace $documents
 bindsym $mod+7 workspace $mindmap
 bindsym $mod+8 workspace 8
@@ -170,8 +172,8 @@ bindsym $mod+9 workspace 9
 bindsym $mod+Shift+1 move container to workspace $terms
 bindsym $mod+Shift+2 move container to workspace $web
 bindsym $mod+Shift+3 move container to workspace $mail
-bindsym $mod+Shift+4 move container to workspace $file_manager
-bindsym $mod+Shift+5 move container to workspace $tasks
+bindsym $mod+Shift+4 move container to workspace $tasks
+bindsym $mod+Shift+5 move container to workspace $file_manager
 bindsym $mod+Shift+6 move container to workspace $documents
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
