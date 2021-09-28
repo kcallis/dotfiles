@@ -47,6 +47,8 @@ taskd.server=freecinc.com:53589
 #
 ###############################################################################
 
+include /usr/share/doc/task/rc/solarized-dark-256.theme
+
 color=on
 color.header=rgb031
 color.footnote=rgb031
