@@ -123,14 +123,15 @@ bindsym $mod+a focus parent
 #set $ws10 "10"
 
 set $terms "1: terms"
-exec --no-startup-id i3-msg workspace "$terms"; exec /usr/bin/urxvtc
+#exec --no-startup-id i3-msg workspace "$terms"; exec /usr/bin/urxvtc
+exec --no-startup-id /usr/bin/urxvtc
 set $web "2: web"
 # Start brave at boot
 exec --no-startup-id brave
 set $mail "3: mail"
 exec --no-startup-id i3-msg workspace "$mail"; exec /usr/bin/urxvtc -e neomutt
 set $tasks "4: tasks"
-exec --no-startup-id i3-msg workspace "$tasks"; exec /usr/bin/urxvtc -e ~/.local/bin/task-dashboard &
+#exec --no-startup-id i3-msg workspace "$tasks"; exec /usr/bin/urxvtc -e ~/.local/bin/task-dashboard &
 set $file_manager "5: files"
 set $documents "6: documents"
 set $mindmap "7: mindmap"
