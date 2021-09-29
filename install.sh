@@ -92,7 +92,7 @@ ln -sf "$DOTFILES/mutt/accounts" "$XDG_CONFIG_HOME/mutt"
 # task #
 ########
 
-mkdir -p "$XDG_CONFIG_HOME/task"
-ln -sf "$DOTFILES/task/taskrc" "$XDG_CONFIG_HOME/task/taskrc"
+mkdir -p "$XDG_CONFIG_HOME/taskwarrior"
+ln -sf "$DOTFILES/taskwarrior/taskrc" "$XDG_CONFIG_HOME/taskwarrior/taskrc"
 
 
