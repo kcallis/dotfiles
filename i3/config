@@ -124,7 +124,7 @@ bindsym $mod+a focus parent
 
 set $terms "1: terms"
 #exec --no-startup-id i3-msg workspace "$terms"; exec /usr/bin/urxvtc
-exec --no-startup-id /usr/bin/urxvtc
+#exec --no-startup-id /usr/bin/urxvtc
 set $web "2: web"
 # Start brave at boot
 exec --no-startup-id brave
