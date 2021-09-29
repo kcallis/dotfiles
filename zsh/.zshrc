@@ -2,6 +2,9 @@ fpath=($ZDOTDIR/external $fpath)
 
 source "$XDG_CONFIG_HOME/zsh/aliases"
 
+powerline-daemon -q
+. /usr/share/powerline/bindings/zsh/powerline.zsh
+
 zmodload zsh/complist
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
