@@ -273,6 +273,7 @@ alias vvsp="callvim -b"\"":vsp"\"
 webpage_title (){
     wget -qO- "$*" | hxselect -s '\n' -c  'title' 2>/dev/null
 }
+alias wget="wget --hsts-file=$XDG_CONFIG_HOME/wget/wget-hsts"
 alias which="(alias; declare -f) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot"
 alias which-command=whence
 alias xzegrep="xzegrep --color=auto"
