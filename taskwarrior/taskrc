@@ -50,54 +50,54 @@ taskd.server=freecinc.com:53589
 include /usr/share/doc/task/rc/solarized-dark-256.theme
 
 color=on
-color.header=rgb031
-color.footnote=rgb031
-color.error=rgb031
-color.debug=rgb031
+#color.header=rgb031
+#color.footnote=rgb031
+#color.error=rgb031
+#color.debug=rgb031
 
-color.summary.bar=white on rgb030
-color.summary.background=white on color0
+#color.summary.bar=white on rgb030
+#color.summary.background=white on color0
 
-color.history.add=color0 on rgb010
-color.history.done=color0 on rgb030
-color.history.delete=color0 on rgb050
+#color.history.add=color0 on rgb010
+#color.history.done=color0 on rgb030
+#color.history.delete=color0 on rgb050
 
-color.burndown.pending=on rgb010
-color.burndown.started=on rgb030
-color.burndown.done=on gray4
+#color.burndown.pending=on rgb010
+#color.burndown.started=on rgb030
+#color.burndown.done=on gray4
 
-color.sync.added=gray4
-color.sync.changed=rgb030
-color.sync.rejected=red
+#color.sync.added=gray4
+#color.sync.changed=rgb030
+#color.sync.rejected=red
 
-color.undo.before=rgb031
-color.undo.after=rgb053
+#color.undo.before=rgb031
+#color.undo.after=rgb053
 
-color.calendar.today=color0 on rgb151
-color.calendar.due=color0 on color249
-color.calendar.due.today=color0 on color225
-color.calendar.overdue=color0 on color255
-color.calendar.weekend=on color235
-color.calendar.holiday=rgb151 on rgb020
-color.calendar.weeknumber=rgb010
+#color.calendar.today=color0 on rgb151
+#color.calendar.due=color0 on color249
+#color.calendar.due.today=color0 on color225
+#color.calendar.overdue=color0 on color255
+#color.calendar.weekend=on color235
+#color.calendar.holiday=rgb151 on rgb020
+#color.calendar.weeknumber=rgb010
 
-color.recurring=rgb151
-color.overdue=color255
-color.due.today=color252
-color.due=color249
-color.active=bold white on rgb012
-color.uda.priority.none=
-color.uda.priority.H=rgb151
-color.uda.priority.M=rgb040
-color.uda.priority.L=rgb030
-color.tagged=none
-color.blocked=color249
-color.blocking=rgb240
-color.project.none=
-color.tag.none=
-color.alternate=on color233
-color.tag.next=white on rgb001
-color.tag.inprogress=white on rgb001
+#color.recurring=rgb151
+#color.overdue=color255
+#color.due.today=color252
+#color.due=color249
+#color.active=bold white on rgb012
+#color.uda.priority.none=
+#color.uda.priority.H=rgb151
+#color.uda.priority.M=rgb040
+#color.uda.priority.L=rgb030
+#color.tagged=none
+#color.blocked=color249
+#color.blocking=rgb240
+#color.project.none=
+#color.tag.none=
+#color.alternate=on color233
+#color.tag.next=white on rgb001
+#color.tag.inprogress=white on rgb001
 
 ####
 
@@ -154,9 +154,9 @@ report.in.filter            = status:pending limit:page (+in)
 report.in.labels            = ID,Description
 
 taskd.server=freecinc.com:53589
-taskd.key=\/home\/kcc\/.config\/task\/keys\/freecinc_3b1f7609.key.pem
-taskd.certificate=\/home\/kcc\/.config\/task\/keys\/freecinc_3b1f7609.cert.pem
-taskd.ca=\/home\/kcc\/.config\/task\/keys\/freecinc_3b1f7609.ca.pem
+taskd.key=\/home\/kcc\/.local\/share\/task\/keys\/freecinc_3b1f7609.key.pem
+taskd.certificate=\/home\/kcc\/.local\/share\/task\/keys\/freecinc_3b1f7609.cert.pem
+taskd.ca=\/home\/kcc\/.local\/share\/task\/keys\/freecinc_3b1f7609.ca.pem
 taskd.credentials=FreeCinc\/freecinc_3b1f7609\/ca42143f-fb5b-49cb-bc5a-6750ccd22ed1
 
 uda.priority.default=M
